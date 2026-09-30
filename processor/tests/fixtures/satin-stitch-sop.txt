@@ -1,0 +1,31 @@
+Satin Stitch Embroidery SOP
+
+Fixed setup: Isacord / Amann 40wt Polyester, 75/11 needle, all products.
+
+## Fixed Constants
+
+Use Isacord 40wt polyester thread and a 75/11 needle. Use an SES light ballpoint 75/11 for polo and stretch fabrics. Use a sharp/R-point 75/11 for caps and wovens.
+
+## Size Bands
+
+MICRO is less than 1.5 mm. SMALL is 1.5 to 3 mm. MEDIUM is 3 to 6 mm. WIDE is 6 to 10 mm. VERY WIDE is greater than 10 mm and should be split or converted to fill.
+
+## Structured Hat and Cap
+
+Digitize center-out and bottom-up. Use water-soluble topping for micro and small text. Run micro and small lettering at 600 to 650 spm.
+
+## Polo
+
+Use one piece of 2.5 to 3 oz cutaway backing. Topping is mandatory for micro and small text. Use an SES light ballpoint 75/11 when possible.
+
+## Breathable Polo
+
+Use no-show mesh cutaway. Topping is mandatory. Use two topping layers on very open mesh. Run lettering at 600 spm and wash-test before production.
+
+## Stretch Fabric
+
+Use no-show mesh cutaway. Topping is mandatory for all text. Keep the garment relaxed while hooping. Start micro pull compensation at 0.22 mm and increase only after a QC failure.
+
+## Tatami and Fill
+
+Use satin below 8 mm, auto-split satin from 8 to 10 mm, and tatami above 10 mm.
