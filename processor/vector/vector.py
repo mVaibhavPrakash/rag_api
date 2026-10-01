@@ -18,7 +18,7 @@ class VectorService:
 
     The Pinecone index must use the ``cosine`` metric (default for dense-only
     indexes).  If you later want true server-side hybrid (sparse + dense on
-    the same vector), the index metric must be ``dotproduct`` — see the
+    the same vector), the index metric must be ``dotproduct`` - see the
     README for migration notes.
 
     Environment variables:
@@ -44,7 +44,7 @@ class VectorService:
             openai_api_key=os.environ["OPENAI_API_KEY"],
         )
 
-        # Pinecone client — create index on first use if absent
+        # Pinecone client - create index on first use if absent
         pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
         existing = [idx.name for idx in pc.list_indexes()]
         if index_name not in existing:

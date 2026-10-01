@@ -156,7 +156,7 @@ async def _save_upload(upload: UploadFile) -> tuple[tempfile.TemporaryDirectory[
 
 
 # ---------------------------------------------------------------------------
-# Routes — general
+# Routes - general
 # ---------------------------------------------------------------------------
 
 
@@ -204,7 +204,7 @@ async def ingest_document(
 
 
 # ---------------------------------------------------------------------------
-# Routes — vector service
+# Routes - vector service
 # ---------------------------------------------------------------------------
 
 
@@ -234,7 +234,7 @@ def vector_delete(body: DeleteRequest) -> dict[str, str]:
 
 
 # ---------------------------------------------------------------------------
-# Routes — retriever service
+# Routes - retriever service
 # ---------------------------------------------------------------------------
 
 
@@ -304,7 +304,7 @@ def retrieve_chunks_only(body: RetrieveRequest) -> list[ChunkResponse]:
 
 
 # ---------------------------------------------------------------------------
-# Routes — frontend-facing composite endpoints
+# Routes - frontend-facing composite endpoints
 # ---------------------------------------------------------------------------
 # These thin wrappers match the paths the React SPA calls so the Vite proxy
 # can forward /api/* straight to this server without any path rewriting.

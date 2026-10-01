@@ -55,7 +55,7 @@ class RAGState(TypedDict):
     messages: Annotated[list[BaseMessage], add_messages]
     # Populated by the retrieve node; read by grade and generate nodes
     retrieved_docs: list[Document]
-    # Rewrite counter — prevents infinite query-rewrite loops
+    # Rewrite counter - prevents infinite query-rewrite loops
     rewrite_count: int
 
 
@@ -82,10 +82,10 @@ class RetrieverService:
 
     Retrieval strategy
     ------------------
-    1. **BM25** (``langchain-community``) — sparse keyword matching over the
+    1. **BM25** (``langchain-community``) - sparse keyword matching over the
        in-memory corpus of documents supplied at query time.  Best for exact
        term overlap and rare tokens.
-    2. **Dense vector search** (``langchain-pinecone``) — semantic similarity
+    2. **Dense vector search** (``langchain-pinecone``) - semantic similarity
        via OpenAI embeddings stored in Pinecone.  Best for paraphrase and
        conceptual matches.
     3. **EnsembleRetriever** merges both result sets with Reciprocal Rank
@@ -186,7 +186,7 @@ class RetrieverService:
         k = top_k if top_k is not None else self._top_k
         ensemble = self._build_ensemble(k=k, namespace=namespace, filter=filter, corpus=corpus)
 
-        # Initial state — cast to Any so LangGraph's add_messages reducer
+        # Initial state - cast to Any so LangGraph's add_messages reducer
         # handles the dict-format HumanMessage at runtime (which it does).
         initial: Any = {
             "messages": [{"role": "user", "content": query}],
@@ -286,7 +286,7 @@ class RetrieverService:
         return {"retrieved_docs": docs}
 
     def _node_grade(self, state: RAGState) -> dict:
-        """Grade relevance of retrieved docs — result stored for routing."""
+        """Grade relevance of retrieved docs - result stored for routing."""
         # Grading is handled inside _route_after_grade; this node is a pass-through
         # that keeps the graph structure explicit and easy to extend.
         return {}
