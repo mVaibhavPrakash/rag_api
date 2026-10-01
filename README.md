@@ -20,9 +20,6 @@ Python service for parsing, chunking, and preparing document content for RAG ind
    ```bash
    # Windows
    .venv/Scripts/python.exe -m uvicorn api:app --host 0.0.0.0 --port 8000
-
-   # macOS/Linux
-   .venv/bin/python -m uvicorn api:app --host 0.0.0.0 --port 8000
    ```
 
    Add `--reload` during development to auto-restart on code changes.
