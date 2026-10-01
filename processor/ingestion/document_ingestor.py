@@ -4,9 +4,9 @@ import re
 from pathlib import Path
 from typing import Any
 
-from apps.processor.chunking.chunker import chunk_markdown_sections
-from apps.processor.models.document import Document
-from apps.processor.parser.markdown import convert_supported_file_to_markdown
+from processor.chunking.chunker import chunk_markdown_sections
+from processor.models.document import Document
+from processor.parser.markdown import convert_supported_file_to_markdown
 
 
 class DocumentIngestionService:
