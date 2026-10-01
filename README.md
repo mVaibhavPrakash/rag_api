@@ -4,12 +4,28 @@ Python service for parsing, chunking, and preparing document content for RAG ind
 
 ## Quick start
 
-```bash
-python -m venv .venv
-source .venv/Scripts/activate
-pip install -r requirements.txt
-uvicorn api:app --app-dir src --host 0.0.0.0 --port 8000
-```
+1. Copy `.env.example` to `.env` and fill in real `PINECONE_API_KEY` /
+   `OPENAI_API_KEY` values. Keep `PINECONE_INDEX` lowercase
+   alphanumeric/hyphen only (Pinecone rejects underscores or uppercase
+   letters in index names).
+2. Install dependencies with [uv](https://docs.astral.sh/uv/) (the project
+   package itself doesn't need to be built, just its dependencies):
+
+   ```bash
+   uv sync --no-install-project
+   ```
+
+3. Start the API (module is `api.py` at the repo root, not under `src/`):
+
+   ```bash
+   # Windows
+   .venv/Scripts/python.exe -m uvicorn api:app --host 0.0.0.0 --port 8000
+
+   # macOS/Linux
+   .venv/bin/python -m uvicorn api:app --host 0.0.0.0 --port 8000
+   ```
+
+   Add `--reload` during development to auto-restart on code changes.
 
 ## API
 

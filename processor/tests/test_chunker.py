@@ -4,11 +4,11 @@ from pathlib import Path
 
 from fastapi.testclient import TestClient
 
-from chunking.chunker import chunk_markdown_sections
-from ingestion.document_ingestor import DocumentIngestionService
+from processor.chunking.chunker import chunk_markdown_sections
+from processor.ingestion.document_ingestor import DocumentIngestionService
 from api import app
-from models.document import Document
-from parser.markdown import convert_supported_file_to_markdown
+from processor.models.document import Document
+from processor.parser.markdown import convert_supported_file_to_markdown
 
 
 class ChunkerTests(unittest.TestCase):
